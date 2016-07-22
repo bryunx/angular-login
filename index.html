@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Basic JavaScript Registration</title>
-</head>
-<body>	
+	<title>Angular JavaScript Authentication</title>
 
-<!-- 6. use .value to retrieve input data from a form -->
+	<script src="js/angular.min.js"></script>
+</head>
+<body ng-app="angAuth" ng-controller="myCtrl">	
+
+	<h1>Welcome to Netscape!</h1>
+
 	<form>
 		<h2>login</h2>
-		<input placeholder="what's your name?" id="username">
-		<input placeholder="password" id="password">
-		<button type="button" onclick="getInfo()">login</button>
+		<input ng-model="username" placeholder="what's your name?">
+		<input ng-model="password" placeholder="password">
+		<button type="button" ng-click="login()">login</button>
 	</form>
-
+	{{username + " " +  password}}
 	<form>
 		<h2>register user</h2>
-		<input placeholder="what's your name?" id="newUsername">
-		<input placeholder="password" id="newPassword">
-		<button type="button" onclick="registerUser()">register</button>
+		<input ng-model="newUsername" placeholder="what's your name?">
+		<input ng-model="newPassword" placeholder="password">
+		<button type="button" ng-click="register()">register</button>
 	</form>
+	{{clean}}
 
-
-	<script src="js/main.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/controllers/myctrl.js"></script>
 </body>
 </html>
