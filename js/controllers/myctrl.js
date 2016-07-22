@@ -18,12 +18,14 @@ app.controller('myCtrl', function($scope){
 			// check to make sure the username and password match
 		    if(value.username == $scope.username && value.password == $scope.password){
 		  		alert('success ' + value.username + ' has been logged in!')
+
+		  		// clear out user input
+				$scope.username = ''
+				$scope.password = ''
 		    }
 		})
 
-		// clear out user input
-		$scope.username = ''
-		$scope.password = ''
+		
 	}
 
 	$scope.register = function() {
